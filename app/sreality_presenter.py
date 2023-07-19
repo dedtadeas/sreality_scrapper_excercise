@@ -23,7 +23,6 @@ def get_ads_from_database():
 def index():
     # Fetch data from the database
     ads = get_ads_from_database()
-    app.logger.error(f'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa{ads[-2:]}')
     return render_template("index.html", ads=ads)
 
 if __name__ == "__main__":

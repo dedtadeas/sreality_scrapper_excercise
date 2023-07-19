@@ -37,8 +37,6 @@ class FlatSpider(scrapy.Spider):
             # Stop the spider when scrape_limit runs out
             self.crawler.engine.close_spider(self, 'Reached scrape_limit')
             return
-
-        
         jsonresponse = response.json()
         flat = FlatItem()
         flat['title'] = jsonresponse['name']['value']
