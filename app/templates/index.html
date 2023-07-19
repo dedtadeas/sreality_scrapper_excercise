@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flat Data</title>
+</head>
+<body>
+    <h1>SREALITY.CZ scrapped data</h1>
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>Image URL</th>
+        </tr>
+        {% for item in ads %}
+        <tr>
+            <td>{{ item[0] }}</td>
+            <td>
+                <img src="{{ item[1] }}" alt="Flat Image" style="max-width: 200px; max-height: 150px;">
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
